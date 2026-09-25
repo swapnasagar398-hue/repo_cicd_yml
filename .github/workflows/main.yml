@@ -1,4 +1,4 @@
-name: show version 
+name:  setup version 
 
 on:
   push:
@@ -10,5 +10,13 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
+
       - name: show python version
         run: python --version
+
+      - name: setup python version 3.10
+        uses: actions/setup-python@v4
+        with:
+            python --version : '3.10'
+      - name: show python version
+        run : python --version
